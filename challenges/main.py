@@ -1,9 +1,7 @@
-def build_roster(students):
-    roster = {}
-    # TODO: loop through `students` and group names by grade in `roster`
-    for name, grade in students:
-        if grade not in roster: 
-            roster[grade] = []
-        roster[grade].append(name)
-        
-    return roster
+def all_unique_tags(posts):
+    tags = set()
+    for post in posts:
+        tags.update(post["tags"])
+    return tags
+    
+print(all_unique_tags([{"title": "A", "tags": ["python", "web"]}, {"title": "B", "tags": ["web", "css"]}]))
